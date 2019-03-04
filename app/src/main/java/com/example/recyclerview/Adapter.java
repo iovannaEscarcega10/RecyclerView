@@ -14,7 +14,7 @@ import java.util.List;
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderDatos> {
 
     private LayoutInflater inflater;
-    List<Persona> personas;
+   private List<Persona> personas;
 
 
     public Adapter (List<Persona> personas) {
@@ -39,12 +39,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderDatos> {
         String Apellido = ci.getApellido();
         Integer Edad = ci.getEdad();
         Integer id = ci.getId();
+        String Telefono= ci.getTelefono();
 
         h.nombre.setText(Nombre);
         h.apellido.setText(Apellido);
         h.edad.setText(Edad.toString());
         h.id.setText(id.toString());
-        
+        h.telefono.setText(Telefono);
+
+        h.itemView.setOnClickListener(Persona.metodoclick(ci));
+
         //h.txtnombre.setText(personas.get(position).getNombre());
     }
 
@@ -56,7 +60,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderDatos> {
     public class ViewHolderDatos extends RecyclerView.ViewHolder {
         //public Object nombre;
         TextView Datos;
-        public TextView nombre,edad,apellido,id;
+        public TextView nombre,edad,apellido,id,telefono;
 
         public ViewHolderDatos(@NonNull View itemView) {
             super(itemView);
@@ -64,7 +68,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderDatos> {
             nombre=itemView.findViewById(R.id.txtnom);
             apellido=itemView.findViewById(R.id.apellidos2);
             edad=itemView.findViewById(R.id.edad2);
-
+            telefono=itemView.findViewById(R.id.telefono);
         }
 
 

@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
                             //Log.d("Listaa",adapter.toString());
 
+
+
+
                         }catch (Exception e){
                             e.printStackTrace();
                         }
@@ -67,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
+        //ese contexto se lo pasa al constructor
         VolleyS.getInstance(this).getmRequestQueue().add(jor);
 
 

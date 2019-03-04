@@ -76,5 +76,20 @@
             android:layout_marginLeft="50dp"
             android:layout_below="@+id/apellidos2"
             />
+        <TextView
+            android:id="@+id/tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/apellidos"
+            android:text="Telefoono:"
+            android:layout_marginTop="58dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/telefono"
+            android:layout_marginTop="58dp"
+            android:layout_marginLeft="75dp"
+
+            />
     </android.support.v7.widget.CardView>
    </RelativeLayout>
